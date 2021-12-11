@@ -6,7 +6,7 @@ Software prequsittes
 $sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
 
 Connectivity to docker
-added the gpg key to our local m/c
+added the gpg key to our local m/c its a sort of authentication.
 $curl -fsSl https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 
 Adding Stable repository of debian
