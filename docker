@@ -2,3 +2,25 @@
 
 $sudo apt-get update
 
+Software prequsittes
+$sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+
+Connectivity to docker
+added the gpg key to our local m/c
+$curl -fsSl https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+Adding Stable repository of debian
+$sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+If all the above thins are installed then we will install docker community edition
+$sudo apt-get install docker-ce
+
+Now we have installed the docker community edition to test we will run a command
+$docker --version
+
+Now we have a precheck to check wheter everying thing is installed 
+$sudo docker run hello-world
+o/p => Hello from Docker
+where hello-world is the image
+
+This has downloaded the hello-world from the docker website. Now this image is present on our local machine.
