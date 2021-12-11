@@ -1,1 +1,4 @@
 #Sample file for docker lab
+
+$sudo apt-get update
+
