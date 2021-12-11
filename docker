@@ -24,3 +24,21 @@ o/p => Hello from Docker
 where hello-world is the image
 
 This has downloaded the hello-world from the docker website. Now this image is present on our local machine.
+
+purging
+sudo apt-get purge docker-ce docker-ce-cli containerd.io
+
+containerd.io is the docker  server demon
+
+running containers and image
+sudo docker ps
+
+completely purging the folder
+sudo rm -rf /var/lib/docker
+
+Installing docker-ce, docker-cli and containerd.io
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+
+enable docker service
+sudo systemctl enable docker
+
