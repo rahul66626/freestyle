@@ -1,0 +1,32 @@
+Create a Docker Image
+
+mkdir demo
+cd demo [all the relevent file for createing the image will be placed here]
+ls -ltr
+vi Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install -y nginx
+#nginx is appln server it has some html file and index.html is present in default location 
+COPY index.nginx-debian.html /var/www/html
+CMD nginx -g 'daemon off;'
+save ESC + :wq
+cat Dockerfile
+#But index.nginx-debian.html is not present so we are creating it.
+vi index.nginx-debian.html
+Welcome to docker session!!!
+ESC + :wq
+cat index.nginx-debian.html
+Welcome to docker session!!!
+#Now docker file and extra file html for copying is ready.
+#Now we need to build image from the docker file
+sudo docker build . ['.' means current directory you can also specify the path]
+
+#to see the images
+sudo docker images
+
+#Tag better administartin putting a name when you push the docker its important.
+sudo docker tag 181ae123c201 demo/nginx_image:version1.0
+
+#list image
+sudo docker images
