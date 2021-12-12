@@ -29,3 +29,22 @@ vi daemon.json
 Esc + :wq
 cat daemon.json 
 ls -ltr
+
+DEMO-3
+######
+sudo su -
+docker pull nginx
+docker images
+docker run -dt -p 80:80 nginx
+docker ps
+curl 0.0.0.0:80
+docker stop <container_name/container_id>
+docker ps
+docker start <container_name/container_id>
+docker ps
+docker stop <container_name/container_id>
+docker container rm <container_name/container_id>
+docker ps
+docker images
+docker image rm nginx
+docker images
