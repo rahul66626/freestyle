@@ -1,1 +1,50 @@
 
+from rahul jacob to Host (privately):
+hi
+from Nitish Gupta to All Attendees:
+Can you hear me ?
+from rahul jacob to Host (privately):
+the aim for both copy and add is to copy from source to container. but i didn't get the difference.
+from rahul jacob to All Panelists:
+without seeing the chat how come we will get lab comments 
+from rahul jacob to All Panelists:
+why not before exam
+from rahul jacob to All Panelists:
+NO
+from Nitish Gupta to All Attendees:
+Hi
+from Nitish Gupta to All Attendees:
+DEMO-3 
+######
+sudo su -
+docker pull nginx
+docker images
+docker run -dt -p 80:80 nginx
+docker ps
+curl 0.0.0.0:80
+docker stop <container_name/container_id>
+docker ps
+docker start <container_name/container_id>
+docker ps
+docker stop <container_name/container_id>
+docker container rm <container_name/container_id>
+docker ps
+docker images
+docker image rm nginx
+docker images
+DEMO-4
+######
+mkdir myproject
+cd myproject
+vi Dockerfile
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install -y nginx
+COPY index.nginx-debian.html /var/www/html
+CMD nginx -g 'daemon off;'
+vi index.nginx-debian.html
+Welcome to the session !!!
+Esc + :wq
+docker build .
+docker images
+docker tag <Image_id> demo/nginx_ubuntu_image:version1.0
